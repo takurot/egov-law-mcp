@@ -39,8 +39,20 @@ pip install egov-law-mcp
 {
   "mcpServers": {
     "egov-law": {
-      "command": "python",
-      "args": ["-m", "egov_law_mcp.server"]
+      "command": "uvx",
+      "args": ["egov-law-mcp"]
+    }
+  }
+}
+```
+
+**または** pipでインストール済みの場合:
+
+```json
+{
+  "mcpServers": {
+    "egov-law": {
+      "command": "egov-law-mcp"
     }
   }
 }
@@ -54,11 +66,30 @@ pip install egov-law-mcp
 {
   "mcpServers": {
     "egov-law": {
-      "command": "/path/to/.venv/bin/python",
-      "args": ["-m", "egov_law_mcp.server"]
+      "command": "uvx",
+      "args": ["egov-law-mcp"]
     }
   }
 }
+```
+
+### 起動方法いろいろ
+
+```bash
+# uvx (推奨: インストール不要で即実行)
+uvx egov-law-mcp
+
+# pipでインストールして実行
+pip install egov-law-mcp
+egov-law-mcp
+
+# pipx (分離環境にインストール)
+pipx install egov-law-mcp
+egov-law-mcp
+
+# モジュールとして実行
+python -m egov_law_mcp.server
+```
 ```
 
 ## 利用可能なツール
