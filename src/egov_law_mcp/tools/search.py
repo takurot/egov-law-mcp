@@ -1,10 +1,8 @@
 """法令検索ツール"""
 
-from typing import Any
-
 from egov_law_mcp.api import EGovAPIClient, EGovAPIError
 from egov_law_mcp.cache import CacheManager
-from egov_law_mcp.models import ErrorCode, LawInfo, LawSearchResult, LawType
+from egov_law_mcp.models import LawInfo, LawSearchResult, LawType
 
 
 def list_law_types() -> dict[str, str]:

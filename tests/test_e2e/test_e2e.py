@@ -12,7 +12,6 @@ from egov_law_mcp.tools import (
     search_laws,
 )
 
-
 # E2Eテストは明示的に実行する必要がある
 pytestmark = pytest.mark.e2e
 
